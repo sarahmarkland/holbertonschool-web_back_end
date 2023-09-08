@@ -10,10 +10,12 @@ export default class Pricing {
   get amount() {
     return this._amount;
   }
+
   // getter for currency
   get currency() {
     return this._currency;
   }
+
   // setter for amount
   set amount(newAmount) {
     if (typeof newAmount !== 'number') {
@@ -21,6 +23,7 @@ export default class Pricing {
     }
     this._amount = newAmount;
   }
+
   // setter for currency
   set currency(newCurrency) {
     if (!(newCurrency instanceof Currency)) {
@@ -31,11 +34,11 @@ export default class Pricing {
   }
 
   displayFullPrice() {
-    return `${this._amount} {this.currency} (${this.currency})`
+    return `${this._amount} ${this._currency.name} (${this._currency.code})`;
   }
 
   // Static method to convert price
-  static convertPrice (amount, conversionRate) {
+  static convertPrice(amount, conversionRate) {
     return amount * conversionRate;
   }
 }
