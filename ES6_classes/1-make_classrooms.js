@@ -7,6 +7,6 @@ export default function initializeRooms() {
   const room3 = new ClassRoom(34);
 
   rooms.push(room1, room2, room3);
-    
+
   return rooms;
 }
