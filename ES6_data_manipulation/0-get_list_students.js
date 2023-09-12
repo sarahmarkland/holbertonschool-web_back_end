@@ -16,7 +16,7 @@ export default function getListStudents() {
   studentList.push(studentB);
 
   const studentC = {
-    id: 3,
+    id: 5,
     firstName: 'Serena',
     location: 'San Francisco',
   };
